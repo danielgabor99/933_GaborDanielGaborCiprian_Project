@@ -137,4 +137,26 @@ public class AppTest
         assert (service.findNota("1234").getIdStudent()=="1");
         assert (service.findNota("1234").getIdTema()=="2");
     }
+
+
+    //Lab2
+    @Test
+    public void AddNewTema()
+    {
+        service.deleteTema("1234");
+        Tema t=new Tema("1234","test",1,1);
+        service.addTema(t);
+        assert(service.findTema("1234")!=null);
+    }
+
+    @Test
+    public void AddNewTema2()
+    {
+        service.deleteTema("1234");
+        Tema t=new Tema("1234","test",1,1);
+        service.addTema(t);
+        assert(service.findTema("1234")!=null);
+    }
+
+
 }
