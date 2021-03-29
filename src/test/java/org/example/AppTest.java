@@ -1,7 +1,5 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
-
 import domain.Nota;
 import domain.Student;
 import domain.Tema;
@@ -16,6 +14,8 @@ import validation.TemaValidator;
 
 import java.io.Console;
 import java.time.LocalDate;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
@@ -152,10 +152,13 @@ public class AppTest
     @Test
     public void AddNewTema2()
     {
-        service.deleteTema("1234");
+        Tema t2=new Tema("1234","test",1,1);
+        service.addTema(t2);
         Tema t=new Tema("1234","test",1,1);
-        service.addTema(t);
-        assert(service.findTema("1234")!=null);
+        t=service.addTema(t);
+
+        assertEquals(t,null);
+
     }
 
 
