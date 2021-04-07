@@ -94,3 +94,9 @@ Nota: 10.0
 Predata in saptamana: 3
 Deadline: 3
 Feedback: bun
+
+Tema: 2
+Nota: 10.0
+Predata in saptamana: 3
+Deadline: 3
+Feedback: bun
