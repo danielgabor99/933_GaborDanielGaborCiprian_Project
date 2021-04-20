@@ -301,6 +301,46 @@ public class AppTest
         assert(service.findNota("1234")!=null);
     }
 
+    //lab4
+    @Test
+    public void AddStudentlab4()
+    {
+        service.deleteStudent("100");
+        Student s= new Student("100","test",1, "test@gmail.com");
+        service.addStudent(s);
+        assert ( service.findStudent("100")!=null);
+    }
+
+    @Test
+    public void AddStudentandAssigmentlab4()
+    {
+        service.deleteStudent("100");
+        Student s= new Student("100","test",1, "test@gmail.com");
+        service.addStudent(s);
+        assert ( service.findStudent("100")!=null);
+        service.deleteTema("1234");
+        Tema t=new Tema("1234","test",1,1);
+        service.addTema(t);
+        assert(service.findTema("1234")!=null);
+    }
+
+    @Test
+    public void AddGradelab4()
+    {
+        service.deleteStudent("100");
+        Student s= new Student("100","test",1, "test@gmail.com");
+        service.addStudent(s);
+
+        service.deleteTema("1234");
+        Tema t=new Tema("1234","test",3,2);
+        service.addTema(t);
+
+
+        LocalDate dataPredare = LocalDate.of(2018, 10,20);
+        Nota n=new Nota("1234","100","1234",10, dataPredare);
+        service.addNota(n,"bun");
+        assert(service.findNota("1234")!=null);
+    }
 
 
 }
